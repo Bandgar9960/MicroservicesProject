@@ -23,8 +23,8 @@ public class User {
 
     @Column(name = "USER_NAME")
     private String name;
-    
-    @Column(name = "USER_EMAIL",nullable = false,unique = true)
+
+    @Column(name = "USER_EMAIL", nullable = false, unique = true)
     private String email;
 
     @Column(name = "USER_ABOUT")
@@ -42,6 +42,6 @@ public class User {
     private Date updateAt;
 
     @Transient
-    private List<Rating> ratings=new ArrayList<>();
+    private List<Rating> ratings = new ArrayList<>();
 
-  }
+}

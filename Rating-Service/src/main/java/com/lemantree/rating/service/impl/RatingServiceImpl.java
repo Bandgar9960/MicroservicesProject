@@ -15,6 +15,7 @@ import java.util.List;
 @Service
 public class RatingServiceImpl implements RatingService {
 
+   
     @Autowired
     private RatingRepository ratingRepository;
 

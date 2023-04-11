@@ -9,11 +9,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Rating-Service" />
         <module name="UserService" />
+        <module name="Gateway" />
         <module name="Hotel-Service" />
         <module name="Service-Registry" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Gateway" target="17" />
       <module name="Hotel-Service" target="17" />
       <module name="Rating-Service" target="17" />
       <module name="Service-Registry" target="17" />
@@ -22,6 +24,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Gateway" options="-parameters" />
       <module name="Hotel-Service" options="-parameters" />
       <module name="Rating-Service" options="-parameters" />
       <module name="Service-Registry" options="-parameters" />

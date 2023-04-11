@@ -16,6 +16,7 @@ import java.util.Date;
 @Data
 public class Rating {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "RATING_ID")

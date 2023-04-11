@@ -4,6 +4,7 @@ import com.lemontree.constants.AppConstants;
 import com.lemontree.dto.Rating;
 import com.lemontree.dto.UserDto;
 import com.lemontree.exception.ResourceNotFoundException;
+import com.lemontree.externalservice.HotelService;
 import com.lemontree.model.Hotel;
 import com.lemontree.model.User;
 import com.lemontree.repository.UserRepository;
@@ -31,6 +32,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private RestTemplate restTemplate;
 
+    @Autowired
+    private HotelService hotelService;
+
     @Override
     public UserDto saveUser(UserDto user) {
         User user1 = this.modelMapper.map(user, User.class);
@@ -42,13 +46,14 @@ public class UserServiceImpl implements UserService {
     public UserDto getSingleUser(Long userId) {
         User user = this.userRepository.findById(userId).orElseThrow(() -> new ResourceNotFoundException(AppConstants.NOT_FOUND + userId));
         //http://localhost:8083/ratings/users/1
-        Rating[] ratings = restTemplate.getForObject("http://localhost:8083/ratings/users/" + user.getUserId(), Rating[].class);
+        Rating[] ratings = restTemplate.getForObject("http://RATING-SERVICE/ratings/users/" + user.getUserId(), Rating[].class);
         List<Rating> ratingList = Arrays.stream(ratings).toList();
 
         List<Rating> ratingsList = ratingList.stream().map((rating) -> {
-             //http://localhost:8082/hotels/2
-            ResponseEntity<Hotel> forEntity = restTemplate.getForEntity("http://localhost:8082/hotels/" + rating.getHotelId(), Hotel.class);
-            Hotel hotel = forEntity.getBody();
+            //http://localhost:8082/hotels/2
+            // ResponseEntity<Hotel> forEntity = restTemplate.getForEntity("http://HOTEL-SERVICE/hotels/" + rating.getHotelId(), Hotel.class);
+            //  Hotel hotel = forEntity.getBody();
+            Hotel hotel = hotelService.getHotel(rating.getHotelId());
             rating.setHotel(hotel);
             return rating;
         }).collect(Collectors.toList());
