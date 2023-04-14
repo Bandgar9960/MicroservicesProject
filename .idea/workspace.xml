@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7388bbc1-2a9f-42a2-9aad-664b546faa2c" name="Changes" comment="Config Server Github Done...Testing Remaining">
+    <list default="true" id="7388bbc1-2a9f-42a2-9aad-664b546faa2c" name="Changes" comment="resilience 4j circuit breaker Done with Testing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel-Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel-Service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel-Service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel-Service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rating-Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Rating-Service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rating-Service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Rating-Service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/lemontree/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/lemontree/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/lemontree/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/lemontree/dto/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/lemontree/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/lemontree/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/test/java/com/lemontree/UserServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/test/java/com/lemontree/UserServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/test/java/com/lemontree/service/impl/UserServiceImplTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681304983663</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="resilience 4j circuit breaker Done with Testing">
+      <created>1681444312316</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681444312316</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -187,7 +185,8 @@
     <MESSAGE value="API-GATEWAY DONE" />
     <MESSAGE value="API-GATEWAY All DONE" />
     <MESSAGE value="Config Server Github Done...Testing Remaining" />
-    <option name="LAST_COMMIT_MESSAGE" value="Config Server Github Done...Testing Remaining" />
+    <MESSAGE value="resilience 4j circuit breaker Done with Testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="resilience 4j circuit breaker Done with Testing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

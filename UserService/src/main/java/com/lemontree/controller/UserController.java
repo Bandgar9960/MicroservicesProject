@@ -5,6 +5,7 @@ import com.lemontree.dto.ApiResponse;
 import com.lemontree.dto.UserDto;
 import com.lemontree.service.UserService;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -26,9 +27,14 @@ public class UserController {
         return new ResponseEntity<>(this.userService.saveUser(user), HttpStatus.CREATED);
     }
 
+    int retryCount = 1;
+
     @GetMapping("/{userId}")
-    @CircuitBreaker(name = "ratingHotelBreaker", fallbackMethod = "ratingHotelFallback")
+    // @CircuitBreaker(name = "ratingHotelBreaker", fallbackMethod = "ratingHotelFallback")
+    @Retry(name = "ratingHotelService", fallbackMethod = "ratingHotelFallback")
     public ResponseEntity<UserDto> getSingleUser(@PathVariable Long userId) {
+        log.info("retryCount : {}", retryCount);
+        retryCount++;
         return new ResponseEntity<>(this.userService.getSingleUser(userId), HttpStatus.OK);
     }
 
