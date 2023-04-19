@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7388bbc1-2a9f-42a2-9aad-664b546faa2c" name="Changes" comment="OKTA Configuration Done">
-      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/lemontree/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/lemontree/config/intercepter/FeignClientInterceptor.java" afterDir="false" />
+    <list default="true" id="7388bbc1-2a9f-42a2-9aad-664b546faa2c" name="Changes" comment="FeignClientInterceptor Implementation Done">
+      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/lemontree/config/intercepter/RestTemplateInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gateway/src/main/java/com/lemontree/gateway/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/src/main/java/com/lemontree/gateway/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/lemontree/config/MyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/lemontree/config/MyConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681550499840</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="FeignClientInterceptor Implementation Done">
+      <created>1681884148459</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681884148459</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -215,7 +218,8 @@
     <MESSAGE value="resilience 4j retry Done with Testing" />
     <MESSAGE value="resilience rate limiter Done with Testing" />
     <MESSAGE value="OKTA Configuration Done" />
-    <option name="LAST_COMMIT_MESSAGE" value="OKTA Configuration Done" />
+    <MESSAGE value="FeignClientInterceptor Implementation Done" />
+    <option name="LAST_COMMIT_MESSAGE" value="FeignClientInterceptor Implementation Done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
