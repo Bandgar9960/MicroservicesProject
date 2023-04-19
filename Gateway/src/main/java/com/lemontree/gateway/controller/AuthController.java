@@ -21,7 +21,6 @@ import java.util.stream.Collectors;
 @Slf4j
 public class AuthController {
 
-
     @GetMapping("/login")
     public ResponseEntity<AuthResponse> login(
             @RegisteredOAuth2AuthorizedClient("okta") OAuth2AuthorizedClient client,
@@ -33,7 +32,7 @@ public class AuthController {
 
         //creating auth response object
         AuthResponse authResponse = new AuthResponse();
-        //setting email to authresponse
+        //setting email to auth response
         authResponse.setUserId(user.getEmail());
         //setting toke to auth response
         authResponse.setAccessToken(client.getAccessToken().getTokenValue());
