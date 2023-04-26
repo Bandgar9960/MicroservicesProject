@@ -44,7 +44,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDto getSingleUser(Long userId) {
-        User user = this.userRepository.findById(userId).orElseThrow(() -> new ResourceNotFoundException(AppConstants.NOT_FOUND + userId));
+        User user = this.userRepository.findById(userId)
+                .orElseThrow(() -> new ResourceNotFoundException(AppConstants.NOT_FOUND + userId));
         //http://localhost:8083/ratings/users/1
         Rating[] ratings = restTemplate.getForObject("http://RATING-SERVICE/ratings/users/" + user.getUserId(), Rating[].class);
         List<Rating> ratingList = Arrays.stream(ratings).toList();

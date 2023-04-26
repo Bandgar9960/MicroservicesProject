@@ -18,6 +18,14 @@ spring:
     show-sql: true
   config:
     import: optional:configserver:http://localhost:8085
+
+okta:
+  oauth2:
+    issuer: https://dev-22279757.okta.com/oauth2/default
+    audience: api://default
+
+
+
 #eureka:
  # instance:
 #    prefer-ip-address: true
